@@ -1,0 +1,162 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  header {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    width: 200px;
+  }
+  
+  nav {
+    margin-left: 20px;
+  }
+  
+  nav a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  nav a:hover {
+    background-color: #ccc;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .hero {
+    background-color: #eee;
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  .hero p {
+    text-align: center;
+  }
+  
+  .news {
+    margin-top: 20px;
+  }
+  
+  .news h2 {
+    text-align: center;
+  }
+  
+  .news article {
+    margin-bottom: 20px;
+  }
+  
+  .news article h3 {
+    font-size: 1.5em;
+  }
+  
+  .open-courses {
+    margin-top: 20px;
+  }
+  
+  .open-courses h2 {
+    text-align: center;
+  }
+  
+  .open-courses article {
+    margin-bottom: 20px;
+  }
+  
+  .open-courses article h3 {
+    font-size: 1.5em;
+  }
+  
+  footer {
+    background-color: #fff;
+    text-align: center;
+  }
+    
+  @media screen and (min-width: 576px) {
+    .hero h1 {
+      font-size: 1.7em;
+    }
+  
+    .hero p {
+      font-size: 1.2em;
+    }
+  
+    .news h2 {
+      font-size: 1.4em;
+    }
+  
+    .news article h3 {
+      font-size: 1.1em;
+    }
+  
+    .open-courses h2 {
+      font-size: 1.4em;
+    }
+  
+    .open-courses article h3 {
+      font-size: 1.1em;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .hero h1 {
+      font-size: 2em;
+    }
+  
+    .hero p {
+      font-size: 1.3em;
+    }
+  
+    .news h2 {
+      font-size: 1.5em;
+    }
+  
+    .news article h3 {
+      font-size: 1.2em;
+    }
+  
+    .open-courses h2 {
+      font-size: 1.5em;
+    }
+  
+    .open-courses article h3 {
+      font-size: 1.2em;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .hero h1 {
+      font-size: 2.5em;
+    }
+  
+    .hero p {
+      font-size: 1.5em;
+    }
+  
+    .news h2 {
+      font-size: 1.7em;
+    }
+  
+    .news article h3 {
+      font-size: 1.3em;
+    }
+  
+    .open-courses h2 {
+      font-size: 1.7em;
+    }
+  
+    .open-courses article h3 {
+      font-size: 1.3em;
+    }
+  }
+  

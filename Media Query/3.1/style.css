@@ -1,0 +1,19 @@
+@media (min-width: 500px) {
+    body {
+      background-color: pink;
+      font-size: 10px;
+      text-align: center;
+    }
+  
+    h1, h2, h3, h4, h5, h6 {
+      text-transform: uppercase;
+    }
+  
+    p {
+      line-height: 10px;
+    }
+  
+    img {
+      display: none;
+    }
+  }
