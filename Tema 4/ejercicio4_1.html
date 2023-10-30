@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Formulario HTML</title>
+</head>
+<body>
+    <h1>Formulario de Ejemplo</h1>
+    <form action="#" method="post">
+
+        <!-- Tipos de elementos input -->
+        <label for="text">Campo de texto:</label>
+        <input type="text" id="text" name="text" autofocus placeholder="Introduce texto" required autocomplete="on">
+        <br><br>
+
+        <label for="number">Campo numérico (0-10):</label>
+        <input type="number" id="number" name="number" min="0" max="10">
+        <br><br>
+
+        <label for="file">Seleccionar archivos:</label>
+        <input type="file" id="file" name="file" multiple>
+        <br><br>
+
+        <label for="password">Contraseña (8 caracteres, número inicial, letra mayúscula final):</label>
+        <input type="password" id="password" name="password" pattern="^[0-9].{6,}[A-Z]$" required>
+        <br><br>
+
+        <!-- Elemento datalist -->
+        <label for="provincia">Provincia:</label>
+        <input list="provincias" id="provincia" name="provincia">
+        <datalist id="provincias">
+            <option value="Madrid">
+            <option value="Barcelona">
+            <option value="Valencia">
+            <option value="Sevilla">
+        </datalist>
+        <br><br>
+
+        <!-- Elemento progress -->
+        <label for="progress">Progreso:</label>
+        <progress id="progress" value="50" max="100"></progress>
+        <br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+
+</body>
+</html>
