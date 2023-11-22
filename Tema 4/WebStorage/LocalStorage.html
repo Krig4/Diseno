@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor con LocalStorage</title>
+</head>
+<body>
+
+<textarea id="editor"></textarea>
+
+<script>
+    const editor = document.getElementById('editor');
+
+    // Cargar contenido almacenado en LocalStorage al cargar la página
+    editor.value = localStorage.getItem('editorContent') || '';
+
+    // Actualizar LocalStorage y otras ventanas al modificar el contenido
+    editor.addEventListener('input', function () {
+        const content = editor.value;
+        localStorage.setItem('editorContent', content);
+
+        // Notificar a otras ventanas abiertas
+        broadcastUpdate(content);
+    });
+
+    // Función para notificar a otras ventanas
+    function broadcastUpdate(content) {
+        if (window.broadcastChannel) {
+            window.broadcastChannel.postMessage(content);
+        }
+    }
+
+    // Configurar el canal de comunicación entre ventanas
+    window.addEventListener('storage', function (event) {
+        if (event.key === 'editorContent') {
+            editor.value = event.newValue;
+        }
+    });
+
+    // Configurar un canal de difusión para comunicarse entre ventanas
+    window.broadcastChannel = new BroadcastChannel('editorChannel');
+    window.broadcastChannel.onmessage = function (event) {
+        editor.value = event.data;
+    };
+</script>
+
+</body>
+</html>

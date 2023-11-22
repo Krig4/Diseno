@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor con SessionStorage</title>
+</head>
+<body>
+
+<textarea id="editor"></textarea>
+
+<script>
+    const editor = document.getElementById('editor');
+
+    // Cargar contenido almacenado en SessionStorage al cargar la página
+    editor.value = sessionStorage.getItem('editorContent') || '';
+
+    // Actualizar SessionStorage en cada pulsación de tecla
+    editor.addEventListener('input', function () {
+        sessionStorage.setItem('editorContent', editor.value);
+    });
+</script>
+
+</body>
+</html>
