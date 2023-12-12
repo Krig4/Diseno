@@ -3,16 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JQuery</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"> 
-    </script>
+    <title>Ejercicios jQuery</title>
+    <!-- Ejercicio 5.1 - Enlazar jQuery desde Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <!-- Ejercicio 5.2 - Enlazar jQuery desde tu web -->
+    <!-- Asegúrate de tener el archivo jquery-2.2.0.min.js en la misma carpeta -->
+    <script src="jquery-2.2.0.min.js"></script>
+
+    <!-- Estilos para resaltar el cambio de color -->
+    <style>
+        h2 {
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .clasea {
+            color: black;
+        }
+
+        .claseb {
+            color: blue;
+        }
+    </style>
 </head>
 <body>
-    <p>Hola!!!!</p>
+
+    <!-- Ejercicio 5.1 - Mostrar mensaje al hacer clic -->
+    <p>¡Haz clic aquí!</p>
+
+    <!-- Ejercicio 5.2 - Cambiar color de letra al pasar el ratón por un encabezado -->
+    <h2>Encabezado 1</h2>
+    <h2>Encabezado 2</h2>
+
+    <!-- Ejercicio 5.3 - Cambio de estilos con eventos mouseup, mousedown y this -->
+    <h2 id="hundirraton">Hundir Ratón</h2>
+    <h2 id="levantarraton">Levantar Ratón</h2>
+
+    <!-- Ejercicio 5.4 - Cambio de estilos con clases -->
+    <p id="parrafo1" class="clasea">Este es un párrafo.</p>
+    <button id="ponerclase">Poner Clase</button>
+    <button id="quitarclase">Quitar Clase</button>
+
     <script>
-        $("p").click(function() {
-         alert( $(this).text());   
-        })
+        // Ejercicio 5.1
+        $(document).ready(function() {
+            $("p").click(function() {
+                alert("¡Hola! Has hecho clic en un párrafo.");
+            });
+        });
+
+        // Ejercicio 5.2
+        $(document).ready(function() {
+            $("h2").mouseover(function() {
+                $(this).css("color", "red");
+            });
+
+            $("h2").mouseout(function() {
+                $(this).css("color", ""); // Para volver al color original al salir del ratón
+            });
+        });
+
+        // Ejercicio 5.3
+        $(document).ready(function() {
+            $("h2#hundirraton").mousedown(function() {
+                $(this).css("color", "blue");
+            });
+
+            $("h2#levantarraton").mouseup(function() {
+                $(this).css("color", "green");
+            });
+        });
+
+        // Ejercicio 5.4
+        $(document).ready(function() {
+            $("#ponerclase").click(function() {
+                $("p#parrafo1").addClass("claseb");
+            });
+
+            $("#quitarclase").click(function() {
+                $("p#parrafo1").removeClass("claseb");
+            });
+        });
     </script>
 </body>
 </html>
