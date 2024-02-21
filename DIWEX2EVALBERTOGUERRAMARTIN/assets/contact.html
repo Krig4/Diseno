@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Contacto</title>
+    <style>
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        .navbar-brand img {
+            animation: slideInFromLeft 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand text-black fs-2" href="./index.html"><img src="./iconos/Dropshipping.jpg"
+                width="50" height="50">Dropshipping</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./aboutus.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Contacto</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container" id="imagenes">
+    <p class="text-center fs-1 text fw-bolder">Contacto</p>
+    <p class="text-primary text-center mt-4 text-black">Delivery sin cargo, averigua para pedidos especiales</p>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <p class="text-primary mt-4 text-black fw-bolder" style="font-size: 20px;">Email</p>
+            <p class="text-primary mt-4 text-black">personaldelivery@gmail.com</p>
+            <p class="text-primary mt-4 text-black fw-bolder">Telefono</p>
+            <p class="text-primary mt-4 text-black">+34 91 474 437</p>
+            <p class="text-primary mt-4 text-black fw-bolder">Horario de atención</p>
+            <p class="text-primary mt-4 text-black">Lun a Vie de 10:00 a 18:00 hs.</p>
+            <p class="text-primary mt-4 text-black">Sábados de 10:00 a 13:00 hs.</p>
+          </div>
+          <div class="col-6"><div class="container mt-4 mb-3">
+            <h2>Formulario de contacto</h2>
+            <div class="editor">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp" placeholder="Nombre Apellido">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="nombre123@ejemplo.com">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" cols="20 " rows="5" class="form-control"></textarea>
+    
+                </div>
+                <button type="submit" onclick="validar()" class="btn btn-primary">Enviar</button>
+            </div>
+        </div>
+        </div>
+      </div>
+    <hr>
+    <br>
+    <br>
+  <footer style="background-color: rgb(146, 149, 146);">
+    <div class="container">
+        <div class="row p-3">
+            <div class="col-sm-8 my-4">
+                <h3 style="color: black;">Productos Dropshipping</h3>
+                <p style="font-size: 20px; color: black;">Seguinos en nuestras redes</p>
+            </div>
+            <div class="col-sm-4 my-5">
+                <img src="./iconos/facebook.png" alt="Facebook" width="20" height="20" class="m-2">
+                <img src="./iconos/instagram.png" alt="Instagram" width="20" height="20" class="m-2">
+                <img src="./iconos/twitter.png" alt="Twitter" width="20" height="20" class="m-2">
+                <img src="./iconos/whatsapp.png" alt="Whatsapp" width="20" height="20" class="m-2">
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+</script>
+<script>
+    function validar() {
+        var nombre = document.getElementById("nombre").value;
+        var email = document.getElementById("email").value;
+        var mensaje = document.getElementById("mensaje").value;
+
+        var errores = [];
+
+        if (nombre.length < 1) {
+            errores.push("El nombre no puede estar vacio");
+        }
+
+        if (mensaje.length <= 8) {
+            errores.push("El mensaje no puede tener menos de 8 caracteres");
+        }
+
+        if (errores.length > 0) {
+            alert("Error en el formulario:\n\n" + errores.join("\n"));
+        } else {
+            alert("El envío se ha realizado de forma correcta");
+
+            document.getElementById("nombre").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("mensaje").value = "";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const editor = document.getElementById('editor');
+        editor.value = localStorage.getItem('editorContent') || '';
+        editor.addEventListener('input', function () {
+            const content = editor.value;
+            localStorage.setItem('editorContent', content);
+            broadcastUpdate(content);
+        });
+
+        function broadcastUpdate(content) {
+            if (window.broadcastChannel) {
+                window.broadcastChannel.postMessage(content);
+            }
+        }
+        window.addEventListener('storage', function (event) {
+            if (event.key === 'editorContent') {
+                editor.value = event.newValue;
+            }
+        });
+        window.broadcastChannel = new BroadcastChannel('editorChannel');
+        window.broadcastChannel.onmessage = function (event) {
+            editor.value = event.data;
+        };
+    });
+</script>
+</body>
+</html>

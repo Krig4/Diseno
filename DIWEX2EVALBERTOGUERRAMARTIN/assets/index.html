@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Dropshipping</title>
+    <style>
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        .navbar-brand img {
+            animation: slideInFromLeft 1s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand text-black fs-2" href="./index.html"><img src="./iconos/Dropshipping.jpg"
+                    width="50" height="50">Dropshipping</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./aboutus.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="imagenes">
+        <p class="text-center fs-1 text fw-bolder">Productos Dropshipping</p>
+        <p class="text-primary text-center mt-4 text-black">Dropshipping productos innovadores y creativos para vender en 2024</p>
+        <p class="text-primary text-center mt-4 text-black">Puedes hacer pedidos especiales que no estén incluidos aquí.</p>
+        <br>
+        <br>
+        <p class="text-center fs-1 text fw-bolder">Productos destacados</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" style="width: 200px">
+                    <img src="./imagenes/prod1.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Alcachofa Ducha</h5>
+                        <p class="card-text">Plata - €280</p>
+                        <p class="card-text">Oro - €340</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" style="width: 200px;">
+                    <img src="./imagenes/prod2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Calentador Masajeador Pies</h5>
+                        <p class="card-text">Sin bluethooth - €280</p>
+                        <p class="card-text">Con bluethooth - €340</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 200px;">
+                    <img src="./imagenes/prod3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Impresora para moviles</h5>
+                        <p class="card-text">Rosa - €280</p>
+                        <p class="card-text">Negra - €340</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 200px;">
+                    <img src="./imagenes/prod4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Escritorio cartón plegable</h5>
+                        <p class="card-text">1,20cms - €280</p>
+                        <p class="card-text">1,5cms - €340</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <p class="fs-1 text fw-bolder">Carrusel</p>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./imagenes/dropshipping3.jpg" class="d-block w-100" width="1200" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="./imagenes/dropshipping2.jpg" class="d-block w-100" width="1200" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="./imagenes/dropshippig1.jpg" class="d-block w-100" width="1200" height="500">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <br>
+      <br>
+      <footer style="background-color: rgb(146, 149, 146);">
+        <div class="container">
+            <div class="row p-3">
+                <div class="col-sm-8 my-4">
+                    <h3 style="color: black;">Productos Dropshipping</h3>
+                    <p style="font-size: 20px; color: black;">Seguinos en nuestras redes</p>
+                </div>
+                <div class="col-sm-4 my-5">
+                    <img src="./iconos/facebook.png" alt="Facebook" width="20" height="20" class="m-2">
+                    <img src="./iconos/instagram.png" alt="Instagram" width="20" height="20" class="m-2">
+                    <img src="./iconos/twitter.png" alt="Twitter" width="20" height="20" class="m-2">
+                    <img src="./iconos/whatsapp.png" alt="Whatsapp" width="20" height="20" class="m-2">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
